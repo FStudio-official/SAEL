@@ -241,8 +241,8 @@ def i2l(inti=int()):
 
 
 def encrypt(key=str("a"),msg=str()):
-    for _ in range(len(msg)):
-        key=key+str(key)
+    while len(key)<len(msg):
+        key=key+key
     mletters=[mletter for mletter in msg]
     kletters=[kletter for kletter in key]
     kz=list()
@@ -262,11 +262,12 @@ def encrypt(key=str("a"),msg=str()):
         estr=estr+el
     print(estr)
 def deencrypt(key="a",msg=str()):
-    for _ in range(len(msg)):
+    while len(key)<len(msg):
         key=key+key
     mletters=[mletter for mletter in msg]
     kletters=[kletter for kletter in key]
     kz=list()
+    
     mz=list()
     for mletter in mletters:
         mz.append(l2i(mletter))

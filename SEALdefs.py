@@ -275,7 +275,7 @@ def deencrypt(key="a",msg=str()):
         kz.append(l2i(kletter))
     els=[]
     for i in range(len(mz)):
-        if not (mz[i]==52 or mz[i]==53 or mz[i]==54 or mz[i]==55):
+        if not (mz[i]==52 or mz[i]==53 or mz[i]==54 or mz[i]==55 or mz[i]==56 or mz[i]==57):
             els.append(i2l(mz[i]+kz[i]))
         else:
             els.append(i2l(mz[i]))
